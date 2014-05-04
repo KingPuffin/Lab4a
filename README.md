@@ -17,9 +17,6 @@ This allows the FPGA to interact with UART.
 # `ascii_to_nibble`
 Converts an ASCII character to a nibble. The nibble stores the character that the ASCII code represents.
 
-# `h_sync_gen`
-This generates the horizontal signals. It cycles throught the 5 states that are in the state diagram. It uses three flip flops for next state logic, count logic and reset logic.
-
 # `uart_rx6` `uart_tx6`
 The UART code to be able to use UART.
 
