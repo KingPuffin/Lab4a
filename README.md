@@ -11,31 +11,26 @@ This lab was made possible through a successful conversion from two nibbles to a
 # `pico rom`
 This is the generated ROM of the Assembly instructions that compose the PicoBlaze.
 
-# `vga_sync`
-This connects v_sync and h_sync. It instantiates both of them.
+# `clk_to_baud`
+This allows the FPGA to interact with UART.
 
-# `v_sync_gen`
-This generates the vertical signals. It cycles throught the 5 states that are in the state diagram. It uses three flip flops for next state logic, count logic and reset logic.
+# `ascii_to_nibble`
+Converts an ASCII character to a nibble. The nibble stores the character that the ASCII code represents.
 
 # `h_sync_gen`
 This generates the horizontal signals. It cycles throught the 5 states that are in the state diagram. It uses three flip flops for next state logic, count logic and reset logic.
 
-# `character_gen`
-This assigns RGB to different values to display different colors. The higher the value, the higher the intensity.
-This determines which pixels are colored in based off of the letter with font_rom.
+# `uart_rx6` `uart_tx6`
+The UART code to be able to use UART.
 
-# `font_rom`
-This contains the information of which columns and rows are used by which characters.
-Basically, all of the specific information of how to generate each character.
-
-# `input_to_pulse`
-This debounces the buttons. The button cycles through three different states: idle, press, and release.
+# `atlys_remote_terminal_pb`
+This is the top level of the project. This instantiates everything else and wires everything up using all of the signals. This also  interacts with the ports on the FPGA.
 
 # Testing and Debugging
-- BE CAREFUL WITH SIGNALS!!! ALWAYS PAY ATTENTION AND MATCH UP THE CORRECT SIGNALS!!
+- Most of the bugs came from getting used to UART and everything else, such as double chars.
+- Sensitivity lists were a bit of a problem
 
 
 # Conclusion
-- This lab was useful in learning something completely different than anything I had done before and how to figure out how to wire things up more so than any other lab before this.
-- This lab also taught that sometimes delays are necessary to sync different signals up
+- This lab was actually pretty intereseting despite not actually accomplishing anything useful. It was really cool to be able to create a little processor through code and to build it on the FPGA. I say a lot more potential that the FPGA can be used with.
 
