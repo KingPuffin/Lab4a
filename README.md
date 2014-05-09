@@ -23,6 +23,9 @@ The UART code to be able to use UART.
 # `atlys_remote_terminal_pb`
 This is the top level of the project. This instantiates everything else and wires everything up using all of the signals. This also  interacts with the ports on the FPGA.
 
+#MicroBlaze
+Microblaze functionality was achieved. Pictures added to github illustrate its functionality. Pictures titled swt0C.png, swt0D.png are displaying the switch that is currently flipped. led.png and leds.png illustrate the led functionality.
+
 # Testing and Debugging
 - Most of the bugs came from getting used to UART and everything else, such as double chars.
 - Sensitivity lists were a bit of a problem
